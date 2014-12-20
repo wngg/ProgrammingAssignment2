@@ -1,5 +1,5 @@
 ## Caching the inverse of a matrix
-## 
+## -- wngg
 
 ## Creates a special "matrix" object that can cache its inverse
 
@@ -25,9 +25,8 @@ makeCacheMatrix <- function(x = matrix()) {
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
     m <- x$getinverse()
-    print(m)
     if(!is.null(m)) {
-        print("getting cached data")
+        message("getting cached data")
         return(m)
     }
     matrix <- x$get()
